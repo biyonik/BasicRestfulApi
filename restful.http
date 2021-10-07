@@ -1,0 +1,64 @@
+###
+GET {{BASE_URL}}
+
+###
+POST {{BASE_URL}}
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "age": 20
+}
+
+###
+POST {{BASE_URL}}
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+GET {{BASE_URL}}/api/users/
+Authorization: Bearer <<TOKEN>>
+###
+GET {{BASE_URL}}/api/users/615d5c6c358f088bddf0e6d4
+
+###
+POST {{BASE_URL}}/api/users
+Content-Type: application/json
+
+{
+  "fullname": "John Doe",
+  "username": "johndoe",
+  "email": "john@doe.com",
+  "password": "JohnDoe123/*",
+  "isAdmin": true
+}
+
+
+###
+PATCH {{BASE_URL}}/api/users/615d5c6c358f088bddf0e6d4
+Content-Type: application/json
+
+{
+  "fullname": "Jonnie Doe",
+  "username": "jonniedoe",
+  "email": "jonnie@doe.com",
+  "password": "JonnieDoe123/*"
+}
+
+###
+DELETE {{BASE_URL}}/api/users/234
+Content-Type: application/json
+
+###
+DELETE {{BASE_URL}}/api/users/all
+Authorization: Bearer <<TOKEN>>
+
+###
+POST {{BASE_URL}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "john@doe.com",
+  "password": "JohnDoe123/*"
+}
+
